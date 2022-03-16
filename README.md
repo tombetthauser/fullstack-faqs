@@ -1,3 +1,5 @@
+![fullstack bbq](https://media.tenor.co/images/8a95f6c7faba89227ff436a250a53948/raw)
+
 # Fullstack FAQs
 
 An ongoing list of common questions and solutions observed during fullstack portfolio project development, specifically for Flask and Express React applications.
