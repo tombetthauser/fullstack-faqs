@@ -20,7 +20,7 @@ An ongoing list of common questions and solutions observed during fullstack port
 There have been a number of incidence where students encounter an issue where WSL for some reason begins devouring memory without bound, causing systems to slow to a hault and become unusable.
 If you are experience extreme system slowdowns and breakage when starting your VSCode or WSL, have a look at your task manager.
 
-![task_manager_ex] (https://i.ibb.co/Sndpy2z/wsldeath.png)
+![task_manager_ex](https://i.ibb.co/Sndpy2z/wsldeath.png)
 
 Notice the insane memory usage of process vmmem, if you are seeing this, this most likely means that WSL is being allocated too much virtual memory; so while this much memory is not actually being dedicated to any real process, it is marked as being consumed as far as the Windows kernel is concerned. 
 
