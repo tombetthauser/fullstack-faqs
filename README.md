@@ -35,4 +35,10 @@ Where <MAX_MEMORY> is approximately 1/4 the total memory of your system in G. Fo
 [wsl2]
 memory=2GB
 ```
-Restart your machine and observe your memory usage. For more details, please read this article: https://blog.simonpeterdebbarma.com/2020-04-memory-and-wsl/
+Restart your machine and observe your memory usage. Run free -g in your WSL shell, if allocated memory matches your config, it works.
+
+NOTES:
+- You can easily access user profile directory by entering %USERPROFILE% in file manager.
+- If config is not loading, first verify that .wslconfig DOES NOT have .txt extension. To verify it does not, make sure you do not have hidden file extensions option enabled in your file manager. (Views > Options)
+
+For more details, please read this article: https://blog.simonpeterdebbarma.com/2020-04-memory-and-wsl/
