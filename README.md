@@ -49,7 +49,8 @@ For more details, please read this article: https://blog.simonpeterdebbarma.com/
 ![image (4)](https://user-images.githubusercontent.com/76798385/159103068-49f56ab8-e350-42b7-8c92-6a7c075e8732.png)
 
 If you encounter this error, you most likely have a trailing slash in the fetch request or in the backend API route. Make sure the resource (URL) you pass in the global fetch() method on the frontend exactly matches the API route in the backend. If the resources (URLs) are not exactly matched, you may encounter a mix content error on Heroku. 
-
-Good Example: The resource in the Fetch Method "/api/users/1/" has to exactly match the backend API route "/api/users/1/"
-Bad Example: The resource in the Fetch Method "/api/users/1" does NOT match the backend API route "/api/users/1/"
+'''
+###Good Example: The resource in the Fetch Method "/api/users/1/" has to exactly match the backend API route "/api/users/1/"
+'''
+###Bad Example: The resource in the Fetch Method "/api/users/1" does NOT match the backend API route "/api/users/1/"
 
