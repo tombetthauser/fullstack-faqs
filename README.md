@@ -56,3 +56,13 @@ If you encounter this error, you most likely have a trailing slash in the fetch 
 ***Bad Example***: The resource in the Fetch Method ***"/api/users/1"*** does NOT match the backend API route ***"/api/users/1/"***
 
 For more details about mix content errors, visit https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+
+## Heroku: Assets Retrieved From Backend API Calls Not Rendering
+Make sure that a trailing backslash is appended to paths in fetches within action thunks or straight fetch calls; i.e.
+```
+fetch('/api/images/');
+```
+and NOT
+```
+fetch('/api/images');
+```
