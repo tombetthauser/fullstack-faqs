@@ -57,6 +57,8 @@ If you encounter this error, you most likely have a trailing slash in the fetch 
 
 For more details about mix content errors, visit https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 
+You can add  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> in the header tag and this will "upgrade" any resources that is loaded over HTTP to HTTPS. More information visit https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests.
+
 ## Heroku: Assets Retrieved From Backend API Calls Not Rendering
 Make sure that a trailing backslash is appended to paths in fetches within action thunks or straight fetch calls; i.e.
 ```
