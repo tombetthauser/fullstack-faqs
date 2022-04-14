@@ -68,3 +68,7 @@ and NOT
 ```
 fetch('/api/images');
 ```
+
+## Heroku: 500 level errors on login / signup
+* triple-check environment variables and PostgreSQL installation on Heroku specifically
+* make sure to actually add environment variables on Heroku, they have to be saved
