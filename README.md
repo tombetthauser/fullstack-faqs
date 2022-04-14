@@ -77,8 +77,8 @@ fetch('/api/images');
 This means there is no space left on user's device. Appears to be insufficient space on your system to finish. 
 You have to clear up some disc space (try deleting unused docker container, images) and then try running the command again. 
 
-'''
+```
 docker system prune
-'''
+```
 This will remove all unused containers, networks, images to help free up space.
 
