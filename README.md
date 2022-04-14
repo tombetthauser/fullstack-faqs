@@ -72,3 +72,13 @@ fetch('/api/images');
 ## Heroku: 500 level errors on login / signup
 * triple-check environment variables and PostgreSQL installation on Heroku specifically
 * make sure to actually add environment variables on Heroku, they have to be saved
+
+## npm ERR! code ENOSPC
+This means there is no space left on user's device. Appears to be insufficient space on your system to finish. 
+You have to clear up some disc space (try deleting unused docker container, images) and then try running the command again. 
+
+'''
+docker system prune
+'''
+This will remove all unused containers, networks, images to help free up space.
+
