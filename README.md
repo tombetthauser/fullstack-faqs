@@ -83,5 +83,5 @@ docker system prune
 This will remove all unused containers, networks, images to help free up space.
 
 ## GitHub Secrets aka Environment Variables for GitHub Actions
-Q: How do I reference sensitive environment variables I would typically store in a local .env file when I do not expose that file to git version control?
-A: GitHub Secrets: https://docs.github.com/en/actions/security-guides/encrypted-secrets
+- Q: How do I reference sensitive environment variables I would typically store in a local .env file when I do not expose that file to git version control?
+- A: GitHub Secrets: https://docs.github.com/en/actions/security-guides/encrypted-secrets
