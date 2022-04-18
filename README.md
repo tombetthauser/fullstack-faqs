@@ -93,4 +93,8 @@ This will remove all unused containers, networks, images to help free up space.
 const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
 console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
 ```
-- Visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values for more information. 
+- Visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values for more information.
+
+## Proper use of Google Maps API
+Google Maps API comes in an embeddable form which references an old version with deprecated methods: this is intended for use in static pages which only reference the API via iframes, as it allows the user to interface with the API without using Javascript. Google provides a developer targeted API and an associated npm package for interfacing with it. The documentation for this is here:
+- https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-javascript
