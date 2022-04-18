@@ -85,3 +85,11 @@ This will remove all unused containers, networks, images to help free up space.
 ## GitHub Secrets aka Environment Variables for GitHub Actions
 - Q: How do I reference sensitive environment variables I would typically store in a local .env file when I do not expose that file to git version control?
 - A: GitHub Secrets: https://docs.github.com/en/actions/security-guides/encrypted-secrets
+
+## Using Object.values 
+- Q:  I have the query result ordered by ratings of the jokes in descending order from the backend. However, on the frontend the query is still sending back the result in order of id (back to ascending order). 
+- A: When dealing with an Array-like object with random key ordering, notice how the array is rearranged in acending order based on the numberic key. When using numeric keys, **the values are returned in the keys' numerical order**
+```
+const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
+console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
+```
