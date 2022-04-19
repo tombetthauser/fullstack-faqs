@@ -3,11 +3,13 @@
 # Full Stack FAQs & All Questions List
 
 > An ongoing list of common questions and solutions observed during
-> fullstack portfolio project development, specifically for **Flask** and
+> full-stack portfolio project development, specifically for **Flask** and
 > **Express** React applications.
 > 
+> [\[Jump to end of list\]](https://github.com/tombetthauser/fullstack-faqs#end-of-list)
+
 ### Table of Contents
-1. **Frequently Asked Questions/Issues**
+1. **[Frequently Asked Questions/Issues](https://github.com/tombetthauser/fullstack-faqs#1-frequent-questions--issues)**
 	- [AWS S3 Acl Permissions](https://github.com/tombetthauser/fullstack-faqs#aws-s3-acl-permissions)
 	-  [WSL Unexpectedly Devouring Memory (Windows users)](https://github.com/tombetthauser/fullstack-faqs#wsl-unexpectedly-devouring-memory-windows-users)
 	- [Mix Content Error](https://github.com/tombetthauser/fullstack-faqs#mix-content-error)
@@ -18,7 +20,7 @@
 	- [Using Object.values](https://github.com/tombetthauser/fullstack-faqs#using-objectvalues)
 	- [Proper use of Google Maps API](https://github.com/tombetthauser/fullstack-faqs#proper-use-of-google-maps-api)
 	
-2. **All Questions List**
+2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
 	- **Tags:** *[Auth], [Unauthorized], [Log out]*
 
@@ -158,5 +160,6 @@ The functions that handle the auth are all working in the starter. This occurs w
 ```
 const response = await fetch('/api/auth/', { ...
 ```
-
 ---
+##### End of List
+##### [\[Back to Top\]](https://github.com/tombetthauser/fullstack-faqs#full-stack-faqs--all-questions-list)
