@@ -24,7 +24,7 @@
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
 	
 	Tags:
-	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta]**
+	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form], [Input], [Required], [Validation]**
 
 -----------------------------------
 
@@ -175,7 +175,18 @@ Adjust the initial-scale value to what works best; this is essentially zooming o
 ```
 <meta name="viewport" content="width=device-width, initial-scale=0.5">
 ```
+---
+### Required Attribute Not Working!
+🗃 **Tags:** *[Form] [Input] [Required] [Validation]*
 
+***Issue:***
+The requried attribute isn't stopping a form from submitting a blank input.
+
+***Solution***
+A few reasons why this could be happening, here are a few things to check:
+1. Input tag must be inside a form tag.
+2. Form needs to have a `type=submit` button/div/input. 
+3. The input tag's event attribute must be `onSubmit=...`
 
 ---
 ##### End of List
