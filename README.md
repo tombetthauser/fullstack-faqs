@@ -22,7 +22,9 @@
 	
 2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
-	- **Tags:** *[Auth], [Unauthorized], [Log out]*
+	
+	Tags:
+	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta]**
 
 -----------------------------------
 
@@ -160,6 +162,21 @@ The functions that handle the auth are all working in the starter. This occurs w
 ```
 const response = await fetch('/api/auth/', { ...
 ```
+---
+### Minor CSS overlapping issue
+🗃 **Tags:** *[CSS] [Overlap] [Meta]*
+
+***Issue:***
+The styling and formatting of divs only works on very large screens for various reasons.
+
+***Solution:***
+(Quick fix) Put this meta tag within the `<head>` HTML tag. 
+Adjust the initial-scale value to what works best; this is essentially zooming out the users screen automatically.
+```
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+```
+
+
 ---
 ##### End of List
 ##### [\[Back to Top\]](https://github.com/tombetthauser/fullstack-faqs#full-stack-faqs--all-questions-list)
