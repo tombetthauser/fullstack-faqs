@@ -24,7 +24,7 @@
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
 	
 	Tags:
-	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form], [Input], [Required], [Validation]**
+	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form], [Input], [Required], [Validation], [Docker], [Dockerfile], [Build], [404], [Static]**
 
 -----------------------------------
 
@@ -189,5 +189,21 @@ A few reasons why this could be happening, here are a few things to check:
 3. The input tag's event attribute must be `onSubmit=...`
 
 ---
+
+### Weird Fetch 404 Errors only on Heroku
+🗃 **Tags:** *[Docker], [Dockerfile], [Build], [404], [Static]*
+
+***Issue:***
+App works on localhost, but on Heroku fetches fail. Specifically getting 404 errors from `method=GET path="/static/css/main.3467ce7e.chunk.css` (and other places similar to this). However, Github actions doesn't throw any errors in the build.
+
+***Solution***
+Typos within the Dockerfile. Most common ones we've seen is a missing slash after "build".
+It should look like this: 
+```
+/react-app/build/* app/static/
+```
+
+---
+
 ##### End of List
 ##### [\[Back to Top\]](https://github.com/tombetthauser/fullstack-faqs#full-stack-faqs--all-questions-list)
