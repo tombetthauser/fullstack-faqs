@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/89945390/168169055-faada930-4c65-4446-90b5-ca576276d671.png)
+![image](https://media4.giphy.com/headers/JugendgegenAIDS/vHgzLZiAexnk.gif)
 
 # Full Stack FAQs & All Questions List
 
