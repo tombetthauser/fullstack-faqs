@@ -1,6 +1,6 @@
 ![visibly confused obi wan](https://media0.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif?cid=ecf05e4744ex0860xek4aze59njvn2abamk8y5d3nackahaq&rid=giphy.gif&ct=g)
 
-# Full Stack FAQs & All Questions List
+# Capstone FAQs
 
 > An ongoing list of common questions and solutions observed during
 > full-stack portfolio project development, specifically for **Flask** and
