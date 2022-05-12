@@ -1,4 +1,4 @@
-![fullstack bbq](https://media.tenor.co/images/8a95f6c7faba89227ff436a250a53948/raw)
+![image](https://user-images.githubusercontent.com/89945390/168169055-faada930-4c65-4446-90b5-ca576276d671.png)
 
 # Full Stack FAQs & All Questions List
 
