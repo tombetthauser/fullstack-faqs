@@ -2,6 +2,8 @@
 
 # Capstone FAQs
 
+An informal and very incomplete list of somewhat common and / or unique problems observed by the Mod 7 TAs during capstone project development. You may find the answers you seek here, but if not we will continue to add to it whenever possible!
+
 > An ongoing list of common questions and solutions observed during
 > full-stack portfolio project development, specifically for **Flask** and
 > **Express** React applications.
