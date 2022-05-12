@@ -25,8 +25,9 @@
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
 	
 	Tags:
-	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form], [Input], [Required], [Validation], [Docker], [Dockerfile], [Build], [404], [Static]**
-
+	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form]**
+	- **[Input], [Required], [Validation], [Docker], [Dockerfile], [Build], [404], [Static]**
+3. **[Additional Resources](https://github.com/tombetthauser/fullstack-faqs#3-additional-resources)**
 -----------------------------------
 
 ## 1. Frequent Questions & Issues
