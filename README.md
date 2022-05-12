@@ -1,7 +1,7 @@
 ![visibly confused obi wan](https://media0.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif?cid=ecf05e4744ex0860xek4aze59njvn2abamk8y5d3nackahaq&rid=giphy.gif&ct=g)
 
-# Capstone FAQs
-
+# Capstone FAAQs
+*(Frequently/Any Asked Questions)*
 > An informal and very incomplete list of somewhat common and / or unique problems observed 
 > by the Mod 7 TAs during capstone project development. You may find the answers you seek here, 
 > but if not we will continue to add to it whenever possible! Specifically for **Flask** and
