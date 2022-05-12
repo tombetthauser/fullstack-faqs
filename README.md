@@ -1,4 +1,4 @@
-![image](https://media4.giphy.com/headers/JugendgegenAIDS/vHgzLZiAexnk.gif)
+![visibly confused obi wan](https://media0.giphy.com/media/1X7lCRp8iE0yrdZvwd/giphy.gif?cid=ecf05e4744ex0860xek4aze59njvn2abamk8y5d3nackahaq&rid=giphy.gif&ct=g)
 
 # Full Stack FAQs & All Questions List
 
