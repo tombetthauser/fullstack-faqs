@@ -207,5 +207,12 @@ It should look like this:
 
 ---
 
+
+## 2. Additional Resources
+![more please gif](https://media0.giphy.com/media/FyKfqRxVbzciY/giphy.gif?cid=790b7611a132ec08c46a50eaea6072821c8fb18362a86592&rid=giphy.gif&ct=g)
+
+- [Module 7 Welcome](https://github.com/tombetthauser/module-7-welcome)
+- [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
+
 ##### End of List
 ##### [\[Back to Top\]](https://github.com/tombetthauser/fullstack-faqs#full-stack-faqs--all-questions-list)
