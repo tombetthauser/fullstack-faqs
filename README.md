@@ -20,6 +20,7 @@
 	- [GitHub Secrets aka Environment Variables for GitHub Actions](https://github.com/tombetthauser/fullstack-faqs#github-secrets-aka-environment-variables-for-github-actions)
 	- [Using Object.values](https://github.com/tombetthauser/fullstack-faqs#using-objectvalues)
 	- [Proper use of Google Maps API](https://github.com/tombetthauser/fullstack-faqs#proper-use-of-google-maps-api)
+	- [Unexpected token < in JSON at position 0](https://github.com/tombetthauser/fullstack-faqs#)
 	
 2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
@@ -142,6 +143,23 @@ Google Maps API comes in an embeddable form which references an old version with
 - https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-javascript
 
 ---
+### Unexpected token < in JSON at position 0
+*Sorry! Don't have a very helpful answer for this!* This error (and variations of this error) occur for many many reasons. A step closer to figuring out these messages would be to add custom error handling for Flask to be able to read the JSON errors.
+
+In `app/__init__.py` add the following routes:
+```py
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return {"errors": ["Method Not Allowed"]}, 405
+```
+```py
+@project_routes.errorhandler(500)
+def internal_server_error(e):
+    return {"errors": ["nternal Server Error"]}, 500
+```
+- [Flask Docs on Blueprint Error Handlers](https://flask.palletsprojects.com/en/2.1.x/errorhandling/#blueprint-error-handlers)
+
+--------------------------------------------------------------------------------------------------------------------
 
 ## 2. Any & All Questions 
 ![milo questions](https://66.media.tumblr.com/f63b7d217d4606797a5940d9dc77eb4a/tumblr_na95wuGHdN1tq4of6o1_500.gif)
