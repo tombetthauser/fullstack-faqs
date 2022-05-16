@@ -152,8 +152,9 @@ In `app/__init__.py` add the following routes:
 def method_not_allowed(e):
     return {"errors": ["Method Not Allowed"]}, 405
 ```
+In each api `--_routes.py`files and change the ROUTENAME to the name of that file's Blueprint:
 ```py
-@project_routes.errorhandler(500)
+@ROUTENAME_routes.errorhandler(500)
 def internal_server_error(e):
     return {"errors": ["nternal Server Error"]}, 500
 ```
