@@ -156,7 +156,7 @@ In each api `--_routes.py`files and change the ROUTENAME to the name of that fil
 ```py
 @ROUTENAME_routes.errorhandler(500)
 def internal_server_error(e):
-    return {"errors": ["nternal Server Error"]}, 500
+    return {"errors": ["Internal Server Error"]}, 500
 ```
 - [Flask Docs on Blueprint Error Handlers](https://flask.palletsprojects.com/en/2.1.x/errorhandling/#blueprint-error-handlers)
 
