@@ -28,6 +28,7 @@
 	Tags:
 	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form]**
 	- **[Input], [Required], [Validation], [Docker], [Dockerfile], [Build], [404], [Static]**
+	- **[Await], [Async], [.then()], [loading mechanism]**
 3. **[Additional Resources](https://github.com/tombetthauser/fullstack-faqs#3-additional-resources)**
 -----------------------------------
 
@@ -223,9 +224,21 @@ It should look like this:
 ```
 /react-app/build/* app/static/
 ```
-
 ---
 
+### Weird Fetch 404 Errors only on Heroku
+🗃 **Tags:** *[Await], [Async], [.then()], [loading mechanism]*
+
+***Issue:***
+This can happen in many different situations, but for example, if async/await-ing a dispatch but it isn't working correctly. A second dispatch is running before the first one finishes. So you need the first dispatch to completely finish before moving onto the second dispatch...
+
+***Solution***
+In React, it is typical to chain .then() as a loading mechanism. Especially when you get a warning on VSCode that says "await has no effect on the dispatch".
+Like so:
+```
+dispatch(createLike(like).then(() => dispatch(getMatches))
+```
+---
 
 ## 3. Additional Resources
 ![more please gif](https://media0.giphy.com/media/FyKfqRxVbzciY/giphy.gif?cid=790b7611a132ec08c46a50eaea6072821c8fb18362a86592&rid=giphy.gif&ct=g)
