@@ -226,11 +226,11 @@ It should look like this:
 ```
 ---
 
-### Weird Fetch 404 Errors only on Heroku
+### Alternative to Async/Await - .then()
 🗃 **Tags:** *[Await], [Async], [.then()], [loading mechanism]*
 
 ***Issue:***
-This can happen in many different situations, but for example, if async/await-ing a dispatch but it isn't working correctly. A second dispatch is running before the first one finishes. So you need the first dispatch to completely finish before moving onto the second dispatch...
+If async/await-ing a dispatch isn't working correctly. Like, a second dispatch is running before the first one finishes. Amd you need the first dispatch to completely finish before moving onto the second dispatch...
 
 ***Solution***
 In React, it is typical to chain .then() as a loading mechanism. Especially when you get a warning on VSCode that says "await has no effect on the dispatch".
@@ -238,6 +238,8 @@ Like so:
 ```
 dispatch(createLike(like).then(() => dispatch(getMatches))
 ```
+[Here is an article detailing why & the key difference](https://dev.to/kylejb/a-key-difference-between-then-and-async-await-in-javascript-53e9)
+
 ---
 
 ## 3. Additional Resources
