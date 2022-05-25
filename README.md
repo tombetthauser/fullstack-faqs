@@ -244,9 +244,14 @@ dispatch(createLike(like).then(() => dispatch(getMatches))
 
 ## 3. Additional Resources
 ![more please gif](https://media0.giphy.com/media/FyKfqRxVbzciY/giphy.gif?cid=790b7611a132ec08c46a50eaea6072821c8fb18362a86592&rid=giphy.gif&ct=g)
-
+#### Capstone:
 - [Module 7 Welcome](https://github.com/tombetthauser/module-7-welcome)
 - [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
+
+#### Career Quest:
+- [LinkedIn: How to properly link your work on the featured section of your profile as a developer](https://www.linkedin.com/pulse/how-properly-link-your-work-featured-section-profile-jeremy-seckinger/)
+- [Meta Tags -- Preview, Edit, and Generate](https://metatags.io/)
+- [LinkedIn: Reset Cache/Get insights into how content shows up](https://www.linkedin.com/post-inspector/)
 
 ##### End of List
 ##### [\[Back to Top\]](https://github.com/tombetthauser/fullstack-faqs#full-stack-faqs--all-questions-list)
