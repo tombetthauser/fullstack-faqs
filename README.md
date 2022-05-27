@@ -161,6 +161,44 @@ def internal_server_error(e):
 ```
 - [Flask Docs on Blueprint Error Handlers](https://flask.palletsprojects.com/en/2.1.x/errorhandling/#blueprint-error-handlers)
 
+---
+### AWS AccessDenied when calling the PutObject error
+
+Credit to Nicholas Yuan for putting this resource together for all of us!
+
+Possible errors to keep an eye on:
+
+``` 
+{"errors":"An error occurred (SignatureDoesNotMatch) when calling the PutObject operation: 
+The request signature we calculated does not match the signature you provided. 
+Check your key and signing method."}
+```
+```
+ "An error occurred (AccessDenied) when calling the PutObject operation: Access Denied" 
+ This error message indicates that your IAM user or role needs permission for the kms:GenerateDataKey action. 
+ This permission is required for buckets that use default encryption with a custom AWS KMS key
+```
+Possible reasons and solutions:
+1. It may be that the actual environment variables in the pipenv shell are being used instead of the environment variables in the .env file. If you see S3_BUCKET or access keys in the terminal when you run printenv , those will be used before the ones in .env files. To reset these, just restart your shell / terminal. The environment variables that are there are loaded from your ~/.bashrc (or equivalent) on terminal startup. Also pipenv shell will inherit environment variables from your terminal, but if you set an environment variable in the pipenv shell, it will disappear on exiting the pipenv shell.
+2. For some reason, some buckets require signature_version to be s3v4 , as opposed to v3 or v4. I would recommend everyone use this signature_version, unless it for some reason doesn't work with buckets than can use v3. [More reading here](https://boto3.amazonaws.com/v1/documentation/api/1.9.42/guide/s3.html#generating-presigned-urls).
+```
+from botocore.config import Config
+my_config = Config(
+    region_name = 'us-east-1',
+    signature_version = 's3V4',
+    retries = {
+        'max_attempts': 10,
+        'mode': 'standard'
+    }
+)
+
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=os.environ.get("S3_KEY"),
+    aws_secret_access_key=os.environ.get("S3_SECRET"),
+    config=my_config
+)
+```
 --------------------------------------------------------------------------------------------------------------------
 
 ## 2. Any & All Questions 
