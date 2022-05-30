@@ -21,6 +21,7 @@
 	- [Using Object.values](https://github.com/tombetthauser/fullstack-faqs#using-objectvalues)
 	- [Proper use of Google Maps API](https://github.com/tombetthauser/fullstack-faqs#proper-use-of-google-maps-api)
 	- [Unexpected token < in JSON at position 0](https://github.com/tombetthauser/fullstack-faqs#unexpected-token--in-json-at-position-0)
+	- [AWS AccessDenied when calling the PutObject error](https://github.com/tombetthauser/fullstack-faqs#AWS-AccessDenied-when-calling-the-PutObject-error)
 	
 2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
