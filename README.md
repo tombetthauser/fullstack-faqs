@@ -182,6 +182,7 @@ Check your key and signing method."}
 Possible reasons and solutions:
 1. It may be that the actual environment variables in the pipenv shell are being used instead of the environment variables in the .env file. If you see S3_BUCKET or access keys in the terminal when you run printenv , those will be used before the ones in .env files. To reset these, just restart your shell / terminal. The environment variables that are there are loaded from your ~/.bashrc (or equivalent) on terminal startup. Also pipenv shell will inherit environment variables from your terminal, but if you set an environment variable in the pipenv shell, it will disappear on exiting the pipenv shell.
 2. For some reason, some buckets require signature_version to be s3v4 , as opposed to v3 or v4. I would recommend everyone use this signature_version, unless it for some reason doesn't work with buckets than can use v3. [More reading here](https://boto3.amazonaws.com/v1/documentation/api/1.9.42/guide/s3.html#generating-presigned-urls).
+3. If it works on localhost but not on Heroku, it may be because a region has not been set, and Heroku's datacenters are on AWS's us-east-1. So if you are using a different region than this on your bucket, the requests from Heroku are going to the wrong region.
 ```
 from botocore.config import Config
 my_config = Config(
