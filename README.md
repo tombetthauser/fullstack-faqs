@@ -287,6 +287,7 @@ dispatch(createLike(like).then(() => dispatch(getMatches))
 #### Capstone:
 - [Module 7 Welcome](https://github.com/tombetthauser/module-7-welcome)
 - [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
+- [Capstone Required Error Messages](https://github.com/whitnessme/capstone-minimum-required-error-messages)
 
 #### Career Quest:
 - [LinkedIn: How to properly link your work on the featured section of your profile as a developer](https://www.linkedin.com/pulse/how-properly-link-your-work-featured-section-profile-jeremy-seckinger/)
