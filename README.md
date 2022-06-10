@@ -245,7 +245,7 @@ Adjust the initial-scale value to what works best; this is essentially zooming o
 ***Issue:***
 The requried attribute isn't stopping a form from submitting a blank input.
 
-***Solution***
+***Solution:***
 A few reasons why this could be happening, here are a few things to check:
 1. Input tag must be inside a form tag.
 2. Form needs to have a `type=submit` button/div/input. 
@@ -259,7 +259,7 @@ A few reasons why this could be happening, here are a few things to check:
 ***Issue:***
 App works on localhost, but on Heroku fetches fail. Specifically getting 404 errors from `method=GET path="/static/css/main.3467ce7e.chunk.css` (and other places similar to this). However, Github actions doesn't throw any errors in the build.
 
-***Solution***
+***Solution:***
 Typos within the Dockerfile. Most common ones we've seen is a missing slash after "build".
 It should look like this: 
 ```
@@ -273,7 +273,7 @@ It should look like this:
 ***Issue:***
 If async/await-ing a dispatch isn't working correctly. Like, a second dispatch is running before the first one finishes. Amd you need the first dispatch to completely finish before moving onto the second dispatch...
 
-***Solution***
+***Solution:***
 In React, it is typical to chain .then() as a loading mechanism. Especially when you get a warning on VSCode that says "await has no effect on the dispatch".
 Like so:
 ```
@@ -292,8 +292,11 @@ Suddenly your AWS image urls aren't working and you are getting this error:
 cannot schedule new futures after interpreter shutdown
 ```
 
-***Solution***
-Check your email and your AWS account. This is from a security issue, most likely from your access key being uploaded to your github repo and being exposed! They shut it down to prevent it from being used anymore. You will need to create a new access key. 
+***Solution:***
+Check your email and your AWS account. This is from a security issue, most likely from your access key being uploaded to your github repo and being exposed! They shut it down to prevent it from being used anymore.
+1. Disable and delete exposed access key.
+2. Create new access key
+3. Update `.env` file!
 
 ---
 
