@@ -30,6 +30,7 @@
 	- **[Auth], [Unauthorized], [Log out], [CSS], [Overlap], [Meta], [Form]**
 	- **[Input], [Required], [Validation], [Docker], [Dockerfile], [Build], [404], [Static]**
 	- **[Await], [Async], [.then()], [loading mechanism]**
+	- **[AWS], [Access Key], [error], [bucket], [security]**
 3. **[Additional Resources](https://github.com/tombetthauser/fullstack-faqs#3-additional-resources)**
 -----------------------------------
 
@@ -279,6 +280,20 @@ Like so:
 dispatch(createLike(like).then(() => dispatch(getMatches))
 ```
 [Here is an article detailing why & the key difference](https://dev.to/kylejb/a-key-difference-between-then-and-async-await-in-javascript-53e9)
+
+---
+
+### AWS Access Key Exposed -- Error Message
+🗃 **Tags:** *[AWS], [Access Key], [error], [bucket], [security]*
+
+***Issue:***
+Suddenly your AWS image urls aren't working and you are getting this error:
+```
+cannot schedule new futures after interpreter shutdown
+```
+
+***Solution***
+Check your email and your AWS account. This is from a security issue, most likely from your access key being uploaded to your github repo and being exposed! They shut it down to prevent it from being used anymore. You will need to create a new access key. 
 
 ---
 
