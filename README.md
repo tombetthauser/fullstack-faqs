@@ -22,7 +22,7 @@
 	- [Proper use of Google Maps API](https://github.com/tombetthauser/fullstack-faqs#proper-use-of-google-maps-api)
 	- [Unexpected token < in JSON at position 0](https://github.com/tombetthauser/fullstack-faqs#unexpected-token--in-json-at-position-0)
 	- [AWS AccessDenied when calling the PutObject error](https://github.com/tombetthauser/fullstack-faqs#AWS-AccessDenied-when-calling-the-PutObject-error)
-	- [Fetch blocked by CORS policy when using wavesurfer.js](https://github.com/tombetthauser/fullstack-faqs#Fetch-blocked-by-CORS-policy-when-using-wavesurfer.js)
+	- [Fetch blocked by CORS policy when using wavesurfer.js](https://github.com/tombetthauser/fullstack-faqs#fetch-blocked-by-CORS-policy-when-using-wavesurfer)
 	
 2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
@@ -204,7 +204,7 @@ s3 = boto3.client(
 )
 ```
 ---
-### Fetch blocked by CORS policy when using wavesurfer.js
+### Fetch blocked by CORS policy when using wavesurfer
 ![Screen Shot 2022-06-13 at 9 49 39 AM (1)](https://user-images.githubusercontent.com/88914047/173454161-3f6aff6f-67f4-48b8-ae8f-ac77a1038d2a.png)
 
 Posible solution to this is to configure the xhr option when creating an instance of the player (with const waveSurfer = WaveSurfer.create({ ... }))
