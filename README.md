@@ -22,6 +22,7 @@
 	- [Proper use of Google Maps API](https://github.com/tombetthauser/fullstack-faqs#proper-use-of-google-maps-api)
 	- [Unexpected token < in JSON at position 0](https://github.com/tombetthauser/fullstack-faqs#unexpected-token--in-json-at-position-0)
 	- [AWS AccessDenied when calling the PutObject error](https://github.com/tombetthauser/fullstack-faqs#AWS-AccessDenied-when-calling-the-PutObject-error)
+	- [Fetch blocked by CORS policy when using wavesurfer.js](https://github.com/tombetthauser/fullstack-faqs#Fetch-blocked-by-CORS-policy-when-using-wavesurfer.js)
 	
 2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
@@ -201,6 +202,33 @@ s3 = boto3.client(
     aws_secret_access_key=os.environ.get("S3_SECRET"),
     config=my_config
 )
+```
+---
+### Fetch blocked by CORS policy when using wavesurfer.js
+![Screen Shot 2022-06-13 at 9 49 39 AM (1)](https://user-images.githubusercontent.com/88914047/173454161-3f6aff6f-67f4-48b8-ae8f-ac77a1038d2a.png)
+
+Posible solution to this is to configure the xhr option when creating an instance of the player (with const waveSurfer = WaveSurfer.create({ ... }))
+Setting the ```mode: "no-cors"``` attribute will allow us to fetch the resource with CORS disabled. 
+Example code:
+```
+const waveSurfer = WaveSurfer.create({
+      container: containerRef.current,
+      waveColor: "#D8D8D8",
+      progressColor: "#ED2784",
+      barRadius: 3,
+      cursorColor: "transparent",
+      responsive: true,
+      xhr: {
+        cache: "default",
+        mode: "no-cors",
+        method: "GET",
+        credentials: "include",
+        headers: [
+          { key: "cache-control", value: "no-cache" },
+          { key: "pragma", value: "no-cache" }
+        ]
+      }
+});
 ```
 --------------------------------------------------------------------------------------------------------------------
 
