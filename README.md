@@ -328,6 +328,22 @@ Check your email and your AWS account. This is from a security issue, most likel
 
 ---
 
+### Alembic Migration File not Updating
+🗃 **Tags:** *[migrate], [alembic], [versions], [flask], [upgrade], [init], [models], [sqlalchemy]*
+
+***Issue:***
+When running `db flask migrate` the migration file does not change. Possibly only includes the User table from the starter. 
+
+***Solution:***
+In the `models/__init__.py` file, check if all your models are imported. The starter will only have User imported. Follow its example to import all models. If you had already upgraded, either `flask db downgrade` or manually delete all the tables in Postbird. And make sure to delete the alembic table in Postbird. Then `flask db migrate`. You will also want to reset your Heroku database too. (See [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips) if you don't know how to reset it. It is better to do this than remove the Postgres add-on.)
+
+```
+from .db import db
+from .user import User
+```
+
+---
+
 ## 3. Additional Resources
 ![more please gif](https://media0.giphy.com/media/FyKfqRxVbzciY/giphy.gif?cid=790b7611a132ec08c46a50eaea6072821c8fb18362a86592&rid=giphy.gif&ct=g)
 #### Capstone:
