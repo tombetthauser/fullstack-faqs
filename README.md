@@ -32,6 +32,7 @@
 	- **[Input], [Required], [Validation], [Docker], [Dockerfile], [Build], [404], [Static]**
 	- **[Await], [Async], [.then()], [loading mechanism]**
 	- **[AWS], [Access Key], [error], [bucket], [security]**
+	- **[migrate], [alembic], [versions], [flask], [upgrade], [init], [models], [sqlalchemy]**
 3. **[Additional Resources](https://github.com/tombetthauser/fullstack-faqs#3-additional-resources)**
 -----------------------------------
 
