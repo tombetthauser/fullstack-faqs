@@ -334,6 +334,7 @@ Check your email and your AWS account. This is from a security issue, most likel
 - [Module 7 Welcome](https://github.com/tombetthauser/module-7-welcome)
 - [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
 - [Capstone Required Error Messages](https://github.com/whitnessme/capstone-minimum-required-error-messages)
+- [SQLAlchemy Multiple Relationships Between Two Tables](https://github.com/whitnessme/sqlalchemy_multiple_relationships_between_two_tables)
 
 #### Career Quest:
 - [LinkedIn: How to properly link your work on the featured section of your profile as a developer](https://www.linkedin.com/pulse/how-properly-link-your-work-featured-section-profile-jeremy-seckinger/)
