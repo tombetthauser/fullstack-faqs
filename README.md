@@ -9,7 +9,7 @@
 > 
 > [\[Jump to end of list\]](https://github.com/tombetthauser/fullstack-faqs#end-of-list)
 
-### Table of Contents
+## Table of Contents
 1. **[Frequently Asked Questions/Issues](https://github.com/tombetthauser/fullstack-faqs#1-frequent-questions--issues)**
 	- [AWS S3 Acl Permissions](https://github.com/tombetthauser/fullstack-faqs#aws-s3-acl-permissions)
 	-  [WSL Unexpectedly Devouring Memory (Windows users)](https://github.com/tombetthauser/fullstack-faqs#wsl-unexpectedly-devouring-memory-windows-users)
@@ -51,7 +51,7 @@
 * There should be a checkbox in the browser interface for your AWS S3 bucket
 
 ---
-### WSL Unexpectedly Devouring Memory (Windows users)
+## WSL Unexpectedly Devouring Memory (Windows users)
 
 ***Issue:*** 
 There have been a number of incidence where students encounter an issue where WSL for some reason begins devouring memory without bound, causing systems to slow to a hault and become unusable.
@@ -82,7 +82,7 @@ Restart your machine and observe your memory usage. Run free -g in your WSL shel
 For more details, please read this article: https://blog.simonpeterdebbarma.com/2020-04-memory-and-wsl/
 
 ------
-### Mix Content Error
+## Mix Content Error
 
 ***Issue:***
 "Mixed content occurs when initial HTML is loaded over a secure HTTPS connection, but other resources (such as images, videos, stylesheets, scripts) are loaded over an insecure HTTP connection."
@@ -102,7 +102,7 @@ For more details about mix content errors, visit https://developer.mozilla.org/e
 You can also add ```<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">``` in the header tag and this will "upgrade" any resources that is loaded over HTTP to HTTPS. More information visit https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests.
 
 ------
-### Heroku: Assets Retrieved From Backend API Calls Not Rendering
+## Heroku: Assets Retrieved From Backend API Calls Not Rendering
 Make sure that a trailing backslash is appended to paths in fetches within *action thunks* or straight *fetch calls*; i.e.
 ```
 fetch('/api/images/');
@@ -113,12 +113,12 @@ fetch('/api/images');
 ```
 
 ---
-### Heroku: 500 level errors on login / signup
+## Heroku: 500 level errors on login / signup
 * triple-check environment variables and PostgreSQL installation on Heroku specifically
 * make sure to actually add environment variables on Heroku, they have to be saved
 
 ---
-### npm ERR! code ENOSPC
+## npm ERR! code ENOSPC
 This means there is no space left on user's device. Appears to be insufficient space on your system to finish. 
 You have to clear up some disc space (try deleting unused docker container, images) and then try running the command again. 
 
@@ -128,12 +128,12 @@ docker system prune
 This will remove all unused containers, networks, images to help free up space.
 
 ---
-### GitHub Secrets aka Environment Variables for GitHub Actions
+## GitHub Secrets aka Environment Variables for GitHub Actions
 - Q: How do I reference sensitive environment variables I would typically store in a local .env file when I do not expose that file to git version control?
 - A: GitHub Secrets: https://docs.github.com/en/actions/security-guides/encrypted-secrets
 
 ---
-### Using Object.values 
+## Using Object.values 
 - Q:  I have the query result ordered by ratings of the jokes in descending order from the backend. However, on the frontend the query is still rendering the result in order of the id (back to ascending order). 
 - A: When dealing with an Array-like object with random key ordering, notice how the array is rearranged in acending order based on the numberic key. When using numeric keys, **the values are returned in the keys' numerical order**. 
 ```
@@ -143,12 +143,12 @@ console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
 - Visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values for more information.
 
 ---
-### Proper use of Google Maps API
+## Proper use of Google Maps API
 Google Maps API comes in an embeddable form which references an old version with deprecated methods: this is intended for use in static pages which only reference the API via iframes, as it allows the user to interface with the API without using Javascript. Google provides a developer targeted API and an associated npm package for interfacing with it. The documentation for this is here:
 - https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-javascript
 
 ---
-### Unexpected token < in JSON at position 0
+## Unexpected token < in JSON at position 0
 *Sorry! Don't have a very helpful answer for this!* This error (and variations of this error) occur for many many reasons. A step closer to figuring out these messages would be to add custom error handling for Flask to be able to read the JSON errors.
 
 In `app/__init__.py` add the following routes:
@@ -166,7 +166,7 @@ def internal_server_error(e):
 - [Flask Docs on Blueprint Error Handlers](https://flask.palletsprojects.com/en/2.1.x/errorhandling/#blueprint-error-handlers)
 
 ---
-### AWS AccessDenied when calling the PutObject error
+## AWS AccessDenied when calling the PutObject error
 
 Credit to Nicholas Yuan for putting this resource together for all of us!
 
@@ -205,7 +205,7 @@ s3 = boto3.client(
 )
 ```
 ---
-### Fetch blocked by CORS policy when using wavesurfer
+## Fetch blocked by CORS policy when using wavesurfer
 ![Screen Shot 2022-06-13 at 9 49 39 AM (1)](https://user-images.githubusercontent.com/88914047/173454161-3f6aff6f-67f4-48b8-ae8f-ac77a1038d2a.png)
 
 Posible solution to this is to configure the xhr option when creating an instance of the player (with const waveSurfer = WaveSurfer.create({ ... }))
@@ -232,7 +232,7 @@ const waveSurfer = WaveSurfer.create({
 });
 ```
 
-### useState Variable Not Updating Correctly
+## useState Variable Not Updating Correctly
 Make sure you are ***not*** setting the useState variable's default value with something that comes from the Redux state that you've grabbed with useSelector.
 - First off, there is a delay in dispatches and updating the state, so it can be unreliable in grabbing the info and give you undefined. And depending on the variable, this could mess up other code that relies on reading this value.
 - Secondly, this will not update on a re-render. JS works from top to bottom and once it goes past that initialization of the useState variables, it won't go back to it. You need to use a useEffect() for anything to change--since they run on re-renders!
@@ -275,7 +275,7 @@ useEffect(() => {
 >  - *If you've come to write a question, but it has already been included here,  put a ✔️ or  ✓ next to the title. Then we can determine which questions can be moved to the FAQ section.*
 
 ---
-### User is Logged out/Session disappears on Refresh
+## User is Logged out/Session disappears on Refresh
 🗃 **Tags:** *[Auth] [Unauthorized] [Log out]*
 
 ***Issue:***
@@ -287,7 +287,7 @@ The functions that handle the auth are all working in the starter. This occurs w
 const response = await fetch('/api/auth/', { ...
 ```
 ---
-### Minor CSS overlapping issue
+## Minor CSS overlapping issue
 🗃 **Tags:** *[CSS] [Overlap] [Meta]*
 
 ***Issue:***
@@ -300,7 +300,7 @@ Adjust the initial-scale value to what works best; this is essentially zooming o
 <meta name="viewport" content="width=device-width, initial-scale=0.5">
 ```
 ---
-### Required Attribute Not Working!
+## Required Attribute Not Working!
 🗃 **Tags:** *[Form] [Input] [Required] [Validation]*
 
 ***Issue:***
@@ -314,7 +314,7 @@ A few reasons why this could be happening, here are a few things to check:
 
 ---
 
-### Weird Fetch 404 Errors only on Heroku
+## Weird Fetch 404 Errors only on Heroku
 🗃 **Tags:** *[Docker], [Dockerfile], [Build], [404], [Static]*
 
 ***Issue:***
@@ -328,7 +328,7 @@ It should look like this:
 ```
 ---
 
-### Alternative to Async/Await - .then()
+## Alternative to Async/Await - .then()
 🗃 **Tags:** *[Await], [Async], [.then()], [loading mechanism]*
 
 ***Issue:***
@@ -344,7 +344,7 @@ dispatch(createLike(like).then(() => dispatch(getMatches))
 
 ---
 
-### AWS Access Key Exposed -- Error Message
+## AWS Access Key Exposed -- Error Message
 🗃 **Tags:** *[AWS], [Access Key], [error], [bucket], [security]*
 
 ***Issue:***
@@ -361,7 +361,7 @@ Check your email and your AWS account. This is from a security issue, most likel
 
 ---
 
-### Alembic Migration File not Updating
+## Alembic Migration File not Updating
 🗃 **Tags:** *[migrate], [alembic], [versions], [flask], [upgrade], [init], [models], [sqlalchemy]*
 
 ***Issue:***
@@ -377,15 +377,15 @@ from .user import User
 
 ---
 
-## 3. Additional Resources
+# 3. Additional Resources
 ![more please gif](https://media0.giphy.com/media/FyKfqRxVbzciY/giphy.gif?cid=790b7611a132ec08c46a50eaea6072821c8fb18362a86592&rid=giphy.gif&ct=g)
-#### Capstone:
+### Capstone:
 - [Module 7 Welcome](https://github.com/tombetthauser/module-7-welcome)
 - [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
 - [Capstone Required Error Messages](https://github.com/whitnessme/capstone-minimum-required-error-messages)
 - [SQLAlchemy Multiple Relationships Between Two Tables](https://github.com/whitnessme/sqlalchemy_multiple_relationships_between_two_tables)
 
-#### Career Quest:
+### Career Quest:
 - [LinkedIn: How to properly link your work on the featured section of your profile as a developer](https://www.linkedin.com/pulse/how-properly-link-your-work-featured-section-profile-jeremy-seckinger/)
 - [Meta Tags -- Preview, Edit, and Generate](https://metatags.io/)
 - [LinkedIn: Reset Cache/Get insights into how content shows up](https://www.linkedin.com/post-inspector/)
