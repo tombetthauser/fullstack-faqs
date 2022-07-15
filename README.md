@@ -23,7 +23,7 @@
 	- [Unexpected token < in JSON at position 0](https://github.com/tombetthauser/fullstack-faqs#unexpected-token--in-json-at-position-0)
 	- [AWS AccessDenied when calling the PutObject error](https://github.com/tombetthauser/fullstack-faqs#AWS-AccessDenied-when-calling-the-PutObject-error)
 	- [Fetch blocked by CORS policy when using wavesurfer.js](https://github.com/tombetthauser/fullstack-faqs#fetch-blocked-by-CORS-policy-when-using-wavesurfer)
-	
+	- [useState Variable Not Updating Correctly](https://github.com/tombetthauser/fullstack-faqs#usestate-variable-not-updating-correctly) 
 2. **[All Questions List](https://github.com/tombetthauser/fullstack-faqs#2-any--all-questions)**
 	> *Search page for tags using* `Ctrl + F` / `Cmd + F`*, including the brackets.*
 	
@@ -36,7 +36,7 @@
 3. **[Additional Resources](https://github.com/tombetthauser/fullstack-faqs#3-additional-resources)**
 -----------------------------------
 
-## 1. Frequent Questions & Issues
+# 1. Frequent Questions & Issues
 ![IDK](https://www.wired.com/wp-content/uploads/2015/03/855.gif)
 
 ---
@@ -231,9 +231,41 @@ const waveSurfer = WaveSurfer.create({
       }
 });
 ```
+
+### useState Variable Not Updating Correctly
+Make sure you are ***not*** setting the useState variable's default value with something that comes from the Redux state that you've grabbed with useSelector.
+- First off, there is a delay in dispatches and updating the state, so it can be unreliable in grabbing the info and give you undefined. And depending on the variable, this could mess up other code that relies on reading this value.
+- Secondly, this will not update on a re-render. JS works from top to bottom and once it goes past that initialization of the useState variables, it won't go back to it. You need to use a useEffect() for anything to change--since they run on re-renders!
+> Bad example:
+```js
+// ⛔ WHAT NOT TO DO ⤵ ⛔
+const post = useSelector((state) => state.session?.post);
+
+const [shareBool, setShareBool] = useState(post[1]?.share);
+...
+```
+> Good example:
+```js
+// ✅ WHAT TO DO ⤵ ✅
+const post = useSelector((state) => state.session?.post);
+
+const [shareBool, setShareBool] = useState('');
+
+useEffect(() => {
+	if (post && Object.values(post).length > 0) {
+        setShareBool(post[1]?.share)
+    }
+}, [post])
+```
+
+ - Now the variable will be updated on the first render and on subsequent re-renders when the dependencies change!
+ - You put the set function in the if state to make sure it's not going to run  before the Redux state has loaded. `Remember that grabbing from the state is an object and in Javascript, an empty object is truthy.`
+ - The default value can be set to anything else, as long as its not relying on something that has to load. `false, {}, [], "default", etc...`
+
+
 --------------------------------------------------------------------------------------------------------------------
 
-## 2. Any & All Questions 
+# 2. Any & All Questions 
 ![milo questions](https://66.media.tumblr.com/f63b7d217d4606797a5940d9dc77eb4a/tumblr_na95wuGHdN1tq4of6o1_500.gif)
 
 *Note to editors:*
